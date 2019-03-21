@@ -1,4 +1,4 @@
-package jawx.errors;
+atpackage jawx.errors;
 
 public class MotorbikeServiceFault {
     private static final String DEFAULT_MESSAGE = "personName cannot be null or empty";
