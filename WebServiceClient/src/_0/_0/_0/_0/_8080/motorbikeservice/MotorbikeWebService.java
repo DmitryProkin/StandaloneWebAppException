@@ -115,6 +115,18 @@ public interface MotorbikeWebService {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<_0._0._0._0._8080.motorbikeservice.Motorbike>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getBike", targetNamespace = "http://0.0.0.0:8080/MotorbikeService", className = "_0._0._0._0._8080.motorbikeservice.GetBike")
+    @ResponseWrapper(localName = "getBikeResponse", targetNamespace = "http://0.0.0.0:8080/MotorbikeService", className = "_0._0._0._0._8080.motorbikeservice.GetBikeResponse")
+    @Action(input = "http://0.0.0.0:8080/MotorbikeService/MotorbikeWebService/getBikeRequest", output = "http://0.0.0.0:8080/MotorbikeService/MotorbikeWebService/getBikeResponse")
+    public List<Motorbike> getBike();
+
+    /**
+     * 
      * @param arg3
      * @param arg2
      * @param arg5
@@ -142,17 +154,5 @@ public interface MotorbikeWebService {
         String arg4,
         @WebParam(name = "arg5", targetNamespace = "")
         String arg5);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<_0._0._0._0._8080.motorbikeservice.Motorbike>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getBike", targetNamespace = "http://0.0.0.0:8080/MotorbikeService", className = "_0._0._0._0._8080.motorbikeservice.GetBike")
-    @ResponseWrapper(localName = "getBikeResponse", targetNamespace = "http://0.0.0.0:8080/MotorbikeService", className = "_0._0._0._0._8080.motorbikeservice.GetBikeResponse")
-    @Action(input = "http://0.0.0.0:8080/MotorbikeService/MotorbikeWebService/getBikeRequest", output = "http://0.0.0.0:8080/MotorbikeService/MotorbikeWebService/getBikeResponse")
-    public List<Motorbike> getBike();
 
 }

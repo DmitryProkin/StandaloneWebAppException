@@ -22,7 +22,7 @@ public class WebServiceClient {
                     ", fueltank='" + motorbike.getFueltank() +
                     ", weight='" + motorbike.getWeight() );
         }
-        System.out.println("Total persons: " + bikes.size());
+        System.out.println("Total motorbikes: " + bikes.size());
 
         Scanner in = new Scanner(System.in);
         String request;
@@ -98,7 +98,7 @@ public class WebServiceClient {
                         System.out.println("newId=" + newId);
                         break;
                     }catch(IllegalNameException ex){
-                        Logger.getLogger(PersonServiceFault.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(MotorbikeServiceFault.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                 }
@@ -110,7 +110,7 @@ public class WebServiceClient {
                         System.out.println(message);
                         break;
                     }catch (IllegalNameException ex){
-                        Logger.getLogger(PersonServiceFault.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(MotorbikeServiceFault.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
                 case "update": {
@@ -136,7 +136,7 @@ public class WebServiceClient {
                         System.out.println(message);
                         break;
                     }catch (IllegalNameException ex){
-                        Logger.getLogger(PersonServiceFault.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(MotorbikeServiceFault.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }

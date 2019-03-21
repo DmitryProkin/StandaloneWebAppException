@@ -1,5 +1,5 @@
 import jawx.errors.IllegalNameException;
-import jawx.errors.PersonServiceFault;
+import jawx.errors.MotorbikeServiceFault;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -25,7 +25,7 @@ public class MotorbikeWebService {
             IllegalNameException {
         if ((brand == null || brand.trim().isEmpty()) || (model == null || model.trim().isEmpty()||
         (color == null || color.trim().isEmpty()) || (fueltank == null || fueltank.trim().isEmpty())|| (weight== null || weight.trim().isEmpty()))) {
-            PersonServiceFault fault = PersonServiceFault.defaultInstance();
+            MotorbikeServiceFault fault = MotorbikeServiceFault.defaultInstance();
             throw new IllegalNameException("Error: The value of one of the fields is not entered!", fault);
         }
         PostgreSQLDAO dao = new PostgreSQLDAO();
@@ -39,7 +39,7 @@ public class MotorbikeWebService {
             List<Motorbike> bikes = new ArrayList<>();
             bikes = dao.getFind(id,"","","","","");
             if (bikes.isEmpty()){
-            PersonServiceFault fault = PersonServiceFault.defaultInstance();
+            MotorbikeServiceFault fault = MotorbikeServiceFault.defaultInstance();
             throw new IllegalNameException("Error: Field didn't found with this Id !", fault);
     }
 
@@ -52,7 +52,7 @@ public class MotorbikeWebService {
         List<Motorbike> bikes = new ArrayList<>();
         bikes = dao.getFind(id,"","","","","");
         if (bikes.isEmpty()){
-            PersonServiceFault fault = PersonServiceFault.defaultInstance();
+            MotorbikeServiceFault fault = MotorbikeServiceFault.defaultInstance();
             throw new IllegalNameException("Error: Field didn't found with this Id !", fault);
         }
         return  dao.update(id,brand, model, color, fueltank, weight);

@@ -19,14 +19,14 @@ public class IllegalNameException
      * Java type that goes as soapenv:Fault detail element.
      * 
      */
-    private PersonServiceFault faultInfo;
+    private MotorbikeServiceFault faultInfo;
 
     /**
      * 
      * @param faultInfo
      * @param message
      */
-    public IllegalNameException(String message, PersonServiceFault faultInfo) {
+    public IllegalNameException(String message, MotorbikeServiceFault faultInfo) {
         super(message);
         this.faultInfo = faultInfo;
     }
@@ -37,7 +37,7 @@ public class IllegalNameException
      * @param cause
      * @param message
      */
-    public IllegalNameException(String message, PersonServiceFault faultInfo, Throwable cause) {
+    public IllegalNameException(String message, MotorbikeServiceFault faultInfo, Throwable cause) {
         super(message, cause);
         this.faultInfo = faultInfo;
     }
@@ -45,9 +45,9 @@ public class IllegalNameException
     /**
      * 
      * @return
-     *     returns fault bean: _0._0._0._0._8080.motorbikeservice.PersonServiceFault
+     *     returns fault bean: _0._0._0._0._8080.motorbikeservice.MotorbikeServiceFault
      */
-    public PersonServiceFault getFaultInfo() {
+    public MotorbikeServiceFault getFaultInfo() {
         return faultInfo;
     }
 

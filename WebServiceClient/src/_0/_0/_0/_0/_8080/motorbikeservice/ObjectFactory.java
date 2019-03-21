@@ -108,11 +108,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PersonServiceFault }
+     * Create an instance of {@link MotorbikeServiceFault }
      * 
      */
-    public PersonServiceFault createPersonServiceFault() {
-        return new PersonServiceFault();
+    public MotorbikeServiceFault createMotorbikeServiceFault() {
+        return new MotorbikeServiceFault();
     }
 
     /**
@@ -203,12 +203,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link PersonServiceFault }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link MotorbikeServiceFault }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://0.0.0.0:8080/MotorbikeService", name = "IllegalNameException")
-    public JAXBElement<PersonServiceFault> createIllegalNameException(PersonServiceFault value) {
-        return new JAXBElement<PersonServiceFault>(_IllegalNameException_QNAME, PersonServiceFault.class, null, value);
+    public JAXBElement<MotorbikeServiceFault> createIllegalNameException(MotorbikeServiceFault value) {
+        return new JAXBElement<MotorbikeServiceFault>(_IllegalNameException_QNAME, MotorbikeServiceFault.class, null, value);
     }
 
     /**
